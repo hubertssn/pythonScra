@@ -69,7 +69,7 @@ def get_image_links_endpoint():
         return jsonify({'error': 'No query parameter provided'}), 400
 
     links = get_image_links(query)
-    return jsonify({'links': links})
+    return jsonify(links)
 
 
 if __name__ == "__main__":
