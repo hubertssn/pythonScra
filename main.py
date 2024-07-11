@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
 def get_image_links(query_):
 
-    # query_ = query_.replace(' ', '+')
+    # q
 
     url = f'https://www.google.com/search?hl=en&tbm=isch&q={query_}'
 
@@ -47,7 +47,7 @@ def get_image_links(query_):
             return []
 
     soup = BeautifulSoup(response.text, 'html.parser')
-    # print(soup.prettify())
+    # print
 
     image_tags = soup.find_all('img')
 
@@ -61,7 +61,7 @@ def get_image_links(query_):
     return image_links[1:5]
 
 
-# api
+# a
 @app.route('/get_image_links', methods=["GET"])
 def get_image_links_endpoint():
     query = request.args.get('query')
@@ -75,11 +75,4 @@ def get_image_links_endpoint():
 if __name__ == "__main__":
     app.run(debug=True)
 
-# http://127.0.0.1:5000/get_image_links?query=Garden+Glory+Hose
 
-# before api
-# if __name__ == "__main__":
-#     query = "Beko BL77 Integrated"
-#     links = get_image_links(query)
-#     for link in links:
-#         print(link)
