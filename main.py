@@ -66,7 +66,8 @@ def get_image_links_endpoint():
         return jsonify({'error': 'No query parameter provided'}), 400
 
     links = get_image_links(query)
-    return jsonify(links)
+    formatted_links = {f"Image Link {i + 1}": link for i, link in enumerate(links)}
+    return jsonify(formatted_links)
 
 
 if __name__ == "__main__":
