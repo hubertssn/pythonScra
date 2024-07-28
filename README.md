@@ -1,4 +1,4 @@
-# pythonScraper
+# pythonScraper - educational purposes
 
 ### Launch API listener:
 ```
